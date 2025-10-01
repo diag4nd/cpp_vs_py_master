@@ -4,10 +4,10 @@
 int main() {
     AVLTree tree;
 
-    std::cout << "=== Тест AVL-дерева ===\n";
+    std::cout << "Тест AVL-дерева" << std::endl;
 
     // Вставка последовательности, вызывающей все 4 случая балансировки
-    std::cout << "Вставляем: 10, 20, 30, 40, 50, 25\n";
+    std::cout << "Вставляем: 10, 20, 30, 40, 50, 25" << std::endl;
     tree.insert(10); //       10
 
     tree.insert(20); //       10
@@ -40,28 +40,28 @@ int main() {
     tree.print_in_order(); // Ожидается: 10 20 25 30 40 50
 
     // Проверка поиска
-    std::cout << "\nПроверка поиска\n";
+    std::cout << "Проверка поиска" << std::endl;
     int keys_to_test[] = {10, 25, 30, 35, 50, 100};
     for (int key : keys_to_test) {
         if (tree.contains(key)) {
-            std::cout << "Ключ " << key << " найден.\n";
+            std::cout << "Ключ " << key << " найден" << std::endl;
         } else {
-            std::cout << "Ключ " << key << " НЕ найден.\n";
+            std::cout << "Ключ " << key << " НЕ найден" << std::endl;
         }
     }
 
     // Проверка find
-    std::cout << "\nПроверка find\n";
+    std::cout << "\nПроверка find" << std::endl;
     Node* node = tree.find(25);
     if (node) {
-        std::cout << "Найден узел с ключом: " << node->key << "\n";
+        std::cout << "Найден узел с ключом: " << node->key << std::endl;
         // Попробуем найти его детей
-        std::cout << "Левый ребёнок: " << (node->left ? std::to_string(node->left->key) : "nullptr") << "\n";
-        std::cout << "Правый ребёнок: " << (node->right ? std::to_string(node->right->key) : "nullptr") << "\n";
+        std::cout << "Левый ребёнок: " << (node->left ? std::to_string(node->left->key) : "nullptr") << std::endl;
+        std::cout << "Правый ребёнок: " << (node->right ? std::to_string(node->right->key) : "nullptr") << std::endl;
     }
 
     // Попытка вставить дубликат
-    std::cout << "\nВставка дубликата 25\n";
+    std::cout << "\nВставка дубликата 25" << std::endl;
     tree.insert(25);
     std::cout << "Обход после вставки дубликата: ";
     tree.print_in_order(); // Должен быть тот же: 10 20 25 30 40 50

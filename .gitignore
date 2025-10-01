@@ -1,3 +1,6 @@
+# Объектные файлы C++
 *.o
-AVLTree/py/.idea/
-AVLTree/py/__pycache__/
+
+# Папки Python
+**/.idea/
+**/__pycache__/

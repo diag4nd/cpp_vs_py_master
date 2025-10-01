@@ -1,0 +1,3 @@
+*.o
+/AVLTree/py/.idea/
+/AVLTree/py/__pycache__/

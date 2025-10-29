@@ -4,18 +4,6 @@ class AVLTree:
     def __init__(self):
         self.root = None
 
-    # def destruct(self, node):
-    #     if node is None:
-    #         return
-    #
-    #     self.destruct(node.left)
-    #     self.destruct(node.right)
-    #
-    #     del node
-
-    # def __del__(self):
-    #     self.destruct(self.root)
-
     def update_height(self, node):
         if node is None:
             return 0

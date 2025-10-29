@@ -1,4 +1,6 @@
 from AVLTree import AVLTree
+import networkx as nx
+
 
 def main():
     tree = AVLTree()
@@ -14,29 +16,29 @@ def main():
                      #      20
 
     tree.insert(30)  # RR →    20
-                     #        / \
-                     #       10 30
+                     #        /  \
+                     #      10    30
 
     tree.insert(40) #       20
-                    #      / \
-                    #     10 30
-                    #          \
-                    #           40
+                    #      /  \
+                    #    10    30
+                    #            \
+                    #             40
 
     tree.insert(50)  # RR →  20
-                     #       / \
-                     #      10 40
-                     #         / \
-                     #        30 50
+                     #      /  \
+                     #    10    40
+                     #         /  \
+                     #       30    50
 
     tree.insert(25)  # RL →   30
-                     #       / \
-                     #      20 40
-                     #     /   / \
-                     #    10  25 50
+                     #       /  \
+                     #     20    40
+                     #    /     /  \
+                     #   10   25    50
 
     print("Обход: ", end="")
-    tree.print_in_order()  # Ожидается: 10 20 25 30 40 50
+    tree.print_in_order() # Ожидается: 10 20 25 30 40 50
 
     # Проверка поиска
     print("Проверка поиска")
